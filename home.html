@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bulma.css">
+  <title>Api</title>
+</head>
+
+<body>
+  </head>
+
+  <body>
+    <section class="section" id="app">
+      <div class="container">
+        <h2 class="title">Api Gui Dashboard</h2 class="heading">
+        <div class="columns">
+          <div class="column is-6">
+            <div class="columns">
+              <div class="column is-6">
+                <div class="buttons">
+                  <button class="button is-primary is-fullwidth is-rounded" v-bind:class="{'is-loading':option}" v-on:click="get1">Online check</button>
+                  <button class="button is-rounded is-info is-fullwidth" v-on:click="ubiq">Ubiquiti</button>
+                  <button class="button is-rounded is-success is-fullwidth" v-on:click="lan">LAN time</button>
+                  <button class="button is-rounded is-warning is-fullwidth" v-on:click="ip">Get IP</button>
+                  <button class="button is-rounded is-info is-fullwidth" v-on:click="shark">Wireshark</button>
+                  <button class="button is-rounded is-primary is-fullwidth" v-on:click="getwifi">ping-check</button>
+                  <button class="button is-rounded is-warning is-fullwidth" :class="{'is-loading':dhc}" v-on:click="dhcp">dhcp request</button>
+                </div>
+              </div>
+
+              <div class="column is-3">
+                <!-- <div class="field">
+                  <label class="label">Enter IP Add</label>
+                  <div class="control">
+                    <input class="input" v-model="ipn" type="text" placeholder="Text input">
+                  </div>
+                </div>
+                <button class="button is-rounded is-info is-fullwidth" v-on:click="saveip">Save</button>
+
+                <br>
+                <progress class="progress" :value="test" max="100">15%</progress> -->
+
+              </div>
+              <div class="column is-3">
+                <!-- <div class="field">
+                  <label class="label">Enter Mac Add</label>
+                  <div class="control">
+                    <input class="input" v-model="mac" type="text" placeholder="Text input">
+                  </div>
+                </div>
+                <button class="button is-rounded is-info is-fullwidth">Change</button> -->
+
+              </div>
+
+
+            </div>
+          </div>
+          <!-- display area for info  -->
+          <div class="column is-4 is-centered">
+            <label for=""> <b> Signal Level </b></label>
+            <article class="media">
+      
+              <div class="media-content">
+                <div class="content">
+                  <progress  class="progress is-warning" :value="test" max="100">15%</progress>
+                  <progress class="progress is-info" :value="test" max="100">15%</progress>
+                </div>
+              </div>
+              <figure class="media-right">
+                <p class="label is-64x64">
+                  {{level}}
+                </p>
+              </figure>
+            </article>
+
+            <br>
+            {{message}} <br>
+            {{ipn}} <br>
+            {{mac}} <br>
+            <!-- {{ttl}} -->
+          </div>
+
+        </div>
+        <div>
+          debug-ttl :{{ttl}}
+        </div>
+      </div>
+    </section>
+    <script src="js/vue.js"></script>
+    <!-- <script src="js/jq.min.js"></script>
+    s
+ -->
+    <script src="js/axios.min.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
+
+</html>
+</body>
+
+</html>
